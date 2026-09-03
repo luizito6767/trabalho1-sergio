@@ -4,29 +4,21 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
 import lombok.Getter;
 import lombok.Setter;
-import java.time.LocalDateTime;
-import java.math.BigDecimal;
 
 @Entity
 @Getter
 @Setter
-public class Pagamentos {
+
+public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Short id;
 
-    private BigDecimal valor;
+    private String nome;
 
-    private LocalDateTime data;
+    private String email;
 
-    private String status;
-
-    private String tipo;
-
-    
-    @OneToOne
-    private Pedido pedido;
+    private String telefone;
 }
